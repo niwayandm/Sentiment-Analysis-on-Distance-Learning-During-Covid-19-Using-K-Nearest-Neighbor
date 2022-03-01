@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    {% include 'layout.html' %}
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Website ini dibuat oleh:</h1>
+        </div> <!-- Content Row -->
+
+        <!-- Account Info -->
+        <div class="card shadow mb-3 mx-auto" style="max-width: 720px;">
+            <div class="row no-gutters">
+                <div class="col-md-4 mx-4 my-4">
+                    <img class="img-thumbnail" alt="Responsive image"
+                        src="{{ url_for('static', filename='images/54417482-min.jpg') }}">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h7 class="card-title"><b>Nama</b></h7>
+                        <p class="card-text">Ni Wayan Devina Maharani</p>
+                        <h7 class="card-title"><b>NPM</b></h7>
+                        <p class="card-text">54417482</p>
+                        <h7 class="card-title"><b>Kelas</b></h7>
+                        <p class="card-text">4IA18</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</body>
+
+</html>

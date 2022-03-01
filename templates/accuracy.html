@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    {% include 'layout.html' %}
+</head>
+
+<body>
+    <div id="includedContent"></div>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Hasil dan Visualisasi Pengujian</h1>
+
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#testing" class="nav-link active" data-toggle="tab">Hasil Klasifikasi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#barplot" class="nav-link" data-toggle="tab">Bar Plot</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#piechart" class="nav-link" data-toggle="tab">Pie Chart</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#wordcloud" class="nav-link" data-toggle="tab">Wordcloud</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="testing">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">
+                            Akurasi klasifikasi dengan model K-Nearest Neighbor adalah 74,38%
+                        </h6>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tweet</th>
+                                        <th>Predicted Label</th>
+                                        <th>Actual Label</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for value in hasil%}
+                                    <tr>
+                                        <td>{{ value[0] }}</td>
+                                        <td>{{ value[1] }}</td>
+                                        <td>{{ value[2] }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="barplot">
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='images/barplot.png') }}" width="350" height="400">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="piechart">
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='images/piechart.png') }}" width="350" height="350">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Wordcloud">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h6 class="m-0 font-weight-bold text-primary">Wordcloud Sentimen Positif</h6>
+                        </div>
+                        <img src="{{ url_for('static', filename='images/wordcloud_pos.png') }}" width="450" height="211">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Wordcloud Sentimen Negatif</h6>
+                        </div>
+                        <img src="{{ url_for('static', filename='images/wordcloud_neg.png') }}" width="450" height="211">
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript">
+    $('#dataTable').DataTable({
+        "ordering":false
+    });
+</script>
+
+</html>
