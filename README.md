@@ -4,4 +4,4 @@ This project was made for my thesis with the same title. I implemented the K-Nea
 
 The Indonesian abbreviation dictionary, stopwords dictionary and the KNN model used for this project has been omitted for data confidentiality.
 
-Here's a link to my thesis if you're interested: [Link](https://library.gunadarma.ac.id/repository/analisis-sentimen-terhadap-pembelajaran-jarak-jauh-menggunakan-metode-k-nearest-neighbor-skripsi)
+My thesis has only been uploaded to [Gunadarma Repository](https://library.gunadarma.ac.id/repository/analisis-sentimen-terhadap-pembelajaran-jarak-jauh-menggunakan-metode-k-nearest-neighbor-skripsi).
